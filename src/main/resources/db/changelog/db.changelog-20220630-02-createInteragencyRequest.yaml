@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: yurij
+      changes:
+        - createTable:
+            tableName: interagency_request
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: request
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: response
+                  type: bigint
+                  constraints:
+                    nullable: true

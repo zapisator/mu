@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: yurij
+      changes:
+        - createTable:
+            tableName: incoming_document
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+              # Добавляем столбец для хранения срока документа
+              - column:
+                  name: document_deadline
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: interagency_request_count
+                  type: integer
+                  constraints:
+                    nullable: true

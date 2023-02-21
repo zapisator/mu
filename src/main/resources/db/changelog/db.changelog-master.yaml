@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      relativeToChangelogFile: true
+      file: db.changelog-20230220-01-createIncomingDocument.yaml
+  - include:
+      relativeToChangelogFile: true
+      file: db.changelog-20220630-02-createInteragencyRequest.yaml
+  - include:
+      relativeToChangelogFile: true
+      file: db.changelog-20220630-03-createMvz.yaml
